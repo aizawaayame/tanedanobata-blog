@@ -1,2 +1,10 @@
 # Auto detect text files and perform LF normalization
-* text=auto
+* text=auto eol=lf
+
+# 来自：https://forum.obsidian.md/t/being-able-to-select-line-endings-crlf-lf/5294/14
+*.md text eol=lf
+*.txt text eol=lf
+*.css text eol=lf
+*.js text eol=lf
+*.json text eol=lf
+*.py text eol=lf
