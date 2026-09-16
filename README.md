@@ -1,4 +1,4 @@
-# 种田的黄油
+# 柚子其实是蜜柑
 
 个人技术博客与笔记站，正式地址为 https://www.tanedanobata.top 。使用 Astro + Fuwari 静态生成，Pagefind 提供站内搜索。
 

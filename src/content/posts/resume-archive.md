@@ -274,7 +274,7 @@ link(
 
 # 个人项目
 
-用UE C++重写ALS项目。实现文档[走跑混合 - 种田的黄油](/Project/OnaGameSample/%E8%B5%B0%E8%B7%91%E6%B7%B7%E5%90%88/)
+用UE C++重写ALS项目。实现文档[走跑混合 - 柚子其实是蜜柑](/Project/OnaGameSample/%E8%B5%B0%E8%B7%91%E6%B7%B7%E5%90%88/)
 - 用C++逻辑重写动画相关逻辑。
 - (进行中)用Camera Stack设计思路重构相机模块。  
 项目地址[GitHub - aizawaayame/OnaGameSample: Rewrite the ALS project using C++.](https://github.com/aizawaayame/OnaGameSample)
