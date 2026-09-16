@@ -102,7 +102,7 @@ export default defineConfig({
 			}
 		}),
         svelte(),
-		sitemap(),
+		sitemap({ serialize: (item) => ({ ...item, url: item.url.replaceAll("+", "%2B") }) }),
 	],
 	markdown: {
 		remarkPlugins: [

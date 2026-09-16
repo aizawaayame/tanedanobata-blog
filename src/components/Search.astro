@@ -39,7 +39,7 @@ input.addEventListener('input',async()=>{
   if(current!==request)return;
   status.textContent=items.length?`找到 ${response.results.length} 篇文章`:'没有找到相关文章，试试其他关键词。';
   for(const item of items){
-   const link=document.createElement('a');link.href=item.url;link.className='block rounded-lg p-3 mt-2 hover:bg-black/5 dark:hover:bg-white/5';
+   const link=document.createElement('a');link.href=item.url.replaceAll("+", "%2B");link.className='block rounded-lg p-3 mt-2 hover:bg-black/5 dark:hover:bg-white/5';
    const title=document.createElement('strong');title.textContent=item.meta.title||'文章';title.className='text-90';
    const excerpt=document.createElement('p');excerpt.className='text-sm text-75 mt-1';
    const parsed=new DOMParser().parseFromString(item.excerpt,'text/html');excerpt.textContent=parsed.body.textContent;

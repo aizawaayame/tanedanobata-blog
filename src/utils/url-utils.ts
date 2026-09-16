@@ -41,5 +41,5 @@ export function getDir(path: string): string {
 }
 
 export function url(path: string) {
-	return joinUrl("", import.meta.env.BASE_URL, path);
+	return joinUrl("", import.meta.env.BASE_URL, path).replaceAll("+", "%2B");
 }

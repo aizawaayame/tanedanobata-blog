@@ -1,4 +1,5 @@
 ---
+import { url } from "@utils/url-utils";
 import { getCollection } from "astro:content";
 import MainGridLayout from "../layouts/MainGridLayout.astro";
 const notes=await getCollection("posts",({data})=>data.kind!=="post"&&!data.draft);
@@ -10,6 +11,6 @@ const groups=order.map(root=>({root,title:names[root]||root,directories:[...new 
  <section class="card-base px-6 md:px-9 py-8 notes-index">
  <h1 class="text-3xl font-bold text-90 mb-3">笔记</h1><p class="text-75 mb-7">把零散的经验，慢慢连成知识。按主题与目录阅读。</p>
  <nav aria-label="笔记主题" class="note-topics">{groups.map(g=><a href={`#${g.root}`}>{g.title}</a>)}</nav>
- {groups.map(g=><section id={g.root} class="note-group"><h2>{g.title}</h2>{g.directories.map(directory=><details open><summary>{directory.split("/").slice(1).join(" / ") || "概览"}</summary><ul>{notes.filter(e=>e.data.directory===directory).sort((a,b)=>a.data.title.localeCompare(b.data.title,"zh-CN")).map(e=><li><a href={e.data.route}>{e.data.title}{e.data.kind==="directory"&&<span> · 概览</span>}</a></li>)}</ul></details>)}</section>)}
+ {groups.map(g=><section id={g.root} class="note-group"><h2>{g.title}</h2>{g.directories.map(directory=><details open><summary>{directory.split("/").slice(1).join(" / ") || "概览"}</summary><ul>{notes.filter(e=>e.data.directory===directory).sort((a,b)=>a.data.title.localeCompare(b.data.title,"zh-CN")).map(e=><li><a href={url(e.data.route)}>{e.data.title}{e.data.kind==="directory"&&<span> · 概览</span>}</a></li>)}</ul></details>)}</section>)}
  </section>
 </MainGridLayout>

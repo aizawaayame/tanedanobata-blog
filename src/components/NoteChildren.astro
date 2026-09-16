@@ -1,7 +1,8 @@
 ---
+import { url } from "@utils/url-utils";
 import { getCollection } from "astro:content";
 interface Props { directory: string }
 const {directory}=Astro.props;
 const entries=(await getCollection("posts",({data})=>!data.draft && data.kind!=="post" && data.directory.startsWith(directory))).filter(e=>e.data.route!==`/${directory}/`).sort((a,b)=>a.data.route.localeCompare(b.data.route,"zh-CN"));
 ---
-<nav aria-label="本目录文章"><h2>本目录文章</h2><ul>{entries.map(e=><li><a href={e.data.route}>{e.data.title}</a></li>)}</ul></nav>
+<nav aria-label="本目录文章"><h2>本目录文章</h2><ul>{entries.map(e=><li><a href={url(e.data.route)}>{e.data.title}</a></li>)}</ul></nav>

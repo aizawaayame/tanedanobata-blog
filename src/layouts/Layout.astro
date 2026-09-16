@@ -82,12 +82,12 @@ const bannerOffset =
 		<title>{pageTitle}</title>
 
 		<meta charset="UTF-8" />
-        <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+        <link rel="canonical" href={new URL(url(Astro.url.pathname), Astro.site)} />
 		<meta name="description" content={description || pageTitle}>
 		<meta name="author" content={profileConfig.name}>
 
 		<meta property="og:site_name" content={siteConfig.title}>
-		<meta property="og:url" content={new URL(Astro.url.pathname, Astro.site)}>
+		<meta property="og:url" content={new URL(url(Astro.url.pathname), Astro.site)}>
 		<meta property="og:title" content={pageTitle}>
 		<meta property="og:description" content={description || pageTitle}>
 		{setOGTypeArticle ? (
@@ -97,7 +97,7 @@ const bannerOffset =
         )}
 
 		<meta name="twitter:card" content="summary_large_image">
-		<meta property="twitter:url" content={new URL(Astro.url.pathname, Astro.site)}>
+		<meta property="twitter:url" content={new URL(url(Astro.url.pathname), Astro.site)}>
 		<meta name="twitter:title" content={pageTitle}>
 		<meta name="twitter:description" content={description || pageTitle}>
 

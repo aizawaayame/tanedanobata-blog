@@ -22,8 +22,9 @@
   "dnsAction": "none",
   "rollback": "Promote the recorded READY deployment with Vercel Instant Rollback. Restore prior framework and command overrides. Node 18 is discontinued and cannot be selected for new builds; rolling back uses the existing static deployment without rebuilding.",
   "validatedPreview": {
-    "id": "dpl_6ypDfJhhoPkwvz1hPX9UfxQSaQz3",
-    "url": "https://tanedanobata-blog-c0t158sui-aizawaayames-projects.vercel.app"
+    "id": "dpl_FCWNwCzVS8uCxXaCnDbM1cNsvQrt",
+    "url": "https://tanedanobata-blog-ctxkm7zyc-aizawaayames-projects.vercel.app",
+    "httpChecksPassed": 114
   },
   "settingsAfter": {
     "framework": "astro",
@@ -31,5 +32,10 @@
     "buildCommand": "pnpm build",
     "installCommand": "pnpm install --frozen-lockfile",
     "outputDirectory": "dist"
+  },
+  "rollbackRehearsal": {
+    "failedDeployment": "dpl_8FzwrPwwjCdAsPBb9kwNRv3tapWp",
+    "restoredDeployment": "dpl_8sNXS7X39so5pxyr3coThF9K4LDr",
+    "reason": "Encoded Unicode redirect paths and literal plus signs required Vercel-specific normalization. Previous production restored with Instant Rollback before fixing and validating all 114 HTTP checks on preview."
   }
 }

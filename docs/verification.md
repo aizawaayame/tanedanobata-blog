@@ -10,6 +10,12 @@
 - 本地生产构建和 Vercel 预览均检查了首页、知识目录、简历、最长代码文章、公式文章、图片、代码复制、按需加载嵌入、中文及 C++ / TArray 搜索、分类过滤与浏览器前进后退。
 - 桌面 1600px、手机 390px 布局通过，无整页横向溢出；键盘可操作导航、搜索和结果。修复了云端转场后重复事件监听，最终预览已复核。
 - Lighthouse 13.4.1 默认移动模拟配置，Chrome 153，本地生产构建每页三次：首页中位数 99 / LCP 1.98s / CLS 0；最长代码文章 97 / LCP 2.29s / CLS 0。原始汇总见 lighthouse-results.json；不是公网正式域名网络性能测量。
-- 最终预览：https://tanedanobata-blog-c0t158sui-aizawaayames-projects.vercel.app 。原项目域名和 DNS 保留，发布配置与可回滚的旧生产部署见 deployment-rollback.json。
+- 最终预览：https://tanedanobata-blog-ctxkm7zyc-aizawaayames-projects.vercel.app 。原项目域名和 DNS 保留，发布配置与可回滚的旧生产部署见 deployment-rollback.json。
 
 GitHub CI 会在 main 推送时再次执行依赖安装、类型检查、构建和内容验证。生产发布结果需以对应提交的 CI 和 Vercel 部署状态为准。
+
+## 云端路径编码复验
+
+首次生产全量 HTTP 检查发现 Vercel 对原始加号和未编码中文重定向的处理与本地静态服务器不同，已用 Instant Rollback 恢复旧生产部署，再修复并验证新预览的 114 项 HTTP 检查全部通过（61 个迁移页面、基础页面及 XML、15 个排除页 404、31 条重定向）。
+
+`vercel.json` 的中文和空格 source 使用 URL 编码；字面加号匹配使用转义，再永久跳转到 `%2B`。所有站内页面、搜索、canonical、RSS 与站点地图主动编码加号，避免多余跳转。内容集合中的逻辑目录地址保留原文。后续修改路由必须同时在 Vercel 预览验证，不能只依赖本地服务器。

@@ -24,7 +24,8 @@ for(const [route,page] of pages){
  if(/class="katex-error"/.test(page.html))errors.push(`Formula error: ${route}`);
  if(/<iframe\b/i.test(page.html))errors.push(`Eager iframe: ${route}`);
  for(const m of page.html.matchAll(/\bhref="([^"]*)"/g)){
-  const href=decode(m[1]);if(!href || /^(mailto:|tel:|javascript:)/.test(href))continue;
+  const href=decode(m[1]);
+  if(href.startsWith("/") && href.split(/[?#]/)[0].includes("+"))errors.push(`Unencoded plus in internal path: ${route} → ${href}`);if(!href || /^(mailto:|tel:|javascript:)/.test(href))continue;
   const link=new URL(href,domain+route);if(link.origin!==domain)continue;
   const target=decodeURIComponent(link.pathname);
   if(!pages.has(target)){
@@ -37,7 +38,8 @@ for(const [route,page] of pages){
 }
 for(const rule of config.redirects){
  if(rule.source.includes(':'))continue;
- const destination=rule.destination.split('?')[0];
+ if(/[^\x00-\x7f ]/.test(rule.source)||rule.source.includes(" "))errors.push(`Unencoded Vercel redirect source: ${rule.source}`);
+ const destination=decodeURIComponent(rule.destination.split('?')[0]);
  if(!pages.has(destination))errors.push(`Redirect target missing: ${rule.source} → ${destination}`);
  if(rule.source===destination||config.redirects.some(r=>r.source===destination))errors.push(`Redirect chain/loop: ${rule.source}`);
 }

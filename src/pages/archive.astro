@@ -1,4 +1,5 @@
 ---
+import { url } from "@utils/url-utils";
 import MainGridLayout from "../layouts/MainGridLayout.astro";
 import { getSortedPosts } from "../utils/content-utils";
 const posts=await getSortedPosts();
@@ -11,7 +12,7 @@ const years=[...new Set(posts.map(post=>post.data.published.getUTCFullYear()))];
   {years.map(year=><section data-archive-year class="mb-8">
    <h2 class="text-2xl font-bold text-[var(--primary)] mb-4">{year}</h2>
    <ul class="space-y-1">{posts.filter(post=>post.data.published.getUTCFullYear()===year).map(post=><li data-archive-entry data-tags={JSON.stringify(post.data.tags)} data-category={post.data.category || ''}>
-    <a href={post.data.route} class="btn-plain !justify-start gap-5 rounded-lg px-3 py-3">
+    <a href={url(post.data.route)} class="btn-plain !justify-start gap-5 rounded-lg px-3 py-3">
      <time class="text-sm text-50 shrink-0" datetime={post.data.published.toISOString().slice(0,10)}>{post.data.published.toISOString().slice(5,10)}</time>
      <span class="font-medium text-90">{post.data.title}</span>
     </a>
