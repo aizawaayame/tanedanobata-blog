@@ -1,0 +1,29 @@
+/* Personal visual layer over Fuwari. System Chinese fonts avoid large remote font downloads. */
+body { font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif; }
+.custom-md { line-height: 1.9; overflow-wrap: anywhere; }
+.custom-md pre { overflow-x:auto; }
+.custom-md img { max-width:100%; height:auto; }
+.custom-md iframe { max-width:100%; }
+.custom-md .katex-display { max-width:100%; overflow-x:auto; overflow-y:hidden; }
+.external-embed { display:flex; flex-wrap:wrap; gap:1rem; padding:1rem; border:1px solid var(--line-divider); border-radius:.75rem; }
+.external-embed button { color:var(--primary); font-weight:600; cursor:pointer; }
+.note-topics { display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:2rem; }
+.note-topics a { padding:.45rem .85rem;border-radius:.6rem;background:var(--btn-regular-bg);color:var(--primary); }
+.note-group { margin-top:2rem;scroll-margin-top:6rem; }
+.note-group h2 { font-size:1.4rem;font-weight:700;color:var(--primary);margin-bottom:.8rem; }
+.note-group details { border-bottom:1px solid var(--line-divider);padding:.8rem 0;color:rgba(0,0,0,.8); }
+.note-group summary { cursor:pointer;font-weight:600; }
+.note-group ul { display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:.6rem;padding:1rem 0 .2rem 1.2rem; }
+.note-group a { color:var(--primary); } .note-group span { font-size:.8rem;opacity:.7; }
+:focus-visible { outline:2px solid var(--primary);outline-offset:4px; }
+.onload-animation { animation-duration:.2s !important;animation-delay:0s !important; }
+@media (prefers-reduced-motion:reduce) { *,*::before,*::after { animation:none !important;transition:none !important;scroll-behavior:auto !important; } .onload-animation { opacity:1 !important;transform:none !important; } }
+
+.dark .note-group details { color:rgba(255,255,255,.85); }
+[hidden] {display:none!important;}
+
+.legacy-anchor {scroll-margin-top:6rem;}
+
+.custom-md pre, .custom-md code, .custom-md code span {transition:none!important;}
+
+.expressive-code { content-visibility:auto; contain-intrinsic-size:auto 24rem; }

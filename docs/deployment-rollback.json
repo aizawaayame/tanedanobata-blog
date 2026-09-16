@@ -1,0 +1,35 @@
+{
+  "capturedAt": "2026-09-16",
+  "project": "tanedanobata-blog",
+  "projectId": "prj_qOal0cZBdcNydP1Bc3M9gFlFY1jI",
+  "teamId": "team_wqEGff52hNXxKEWHMlFdVPP3",
+  "domain": "www.tanedanobata.top",
+  "productionBefore": {
+    "id": "dpl_8sNXS7X39so5pxyr3coThF9K4LDr",
+    "url": "tanedanobata-blog-e8iync02e-aizawaayames-projects.vercel.app",
+    "state": "READY",
+    "gitSha": "56ec8724f890b8606f36760b2224cb417afcca4a"
+  },
+  "settingsBefore": {
+    "framework": null,
+    "nodeVersion": "18.x",
+    "buildCommand": null,
+    "installCommand": null,
+    "outputDirectory": null,
+    "devCommand": null,
+    "rootDirectory": null
+  },
+  "dnsAction": "none",
+  "rollback": "Promote the recorded READY deployment with Vercel Instant Rollback. Restore prior framework and command overrides. Node 18 is discontinued and cannot be selected for new builds; rolling back uses the existing static deployment without rebuilding.",
+  "validatedPreview": {
+    "id": "dpl_6ypDfJhhoPkwvz1hPX9UfxQSaQz3",
+    "url": "https://tanedanobata-blog-c0t158sui-aizawaayames-projects.vercel.app"
+  },
+  "settingsAfter": {
+    "framework": "astro",
+    "nodeVersion": "22.x",
+    "buildCommand": "pnpm build",
+    "installCommand": "pnpm install --frozen-lockfile",
+    "outputDirectory": "dist"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "tool": "Lighthouse 13.4.1",
+  "profile": "Default mobile simulated throttling, headless Chrome 153",
+  "target": "Local production build served by astro preview at http://127.0.0.1:4321",
+  "date": "2026-09-16",
+  "pages": [
+    {
+      "route": "/",
+      "runs": [
+        {
+          "performance": 99,
+          "lcpMs": 1986.0779999999995,
+          "cls": 0,
+          "tbtMs": 0
+        },
+        {
+          "performance": 99,
+          "lcpMs": 1976.7889999999998,
+          "cls": 0,
+          "tbtMs": 0
+        },
+        {
+          "performance": 99,
+          "lcpMs": 1971.5990000000004,
+          "cls": 0,
+          "tbtMs": 0
+        }
+      ],
+      "median": {
+        "performance": 99,
+        "lcpMs": 1976.7889999999998,
+        "cls": 0,
+        "tbtMs": 0
+      }
+    },
+    {
+      "route": "/posts/ue5-skeletal-render-cpu-skin/",
+      "runs": [
+        {
+          "performance": 97,
+          "lcpMs": 2424.0137999999997,
+          "cls": 0,
+          "tbtMs": 0
+        },
+        {
+          "performance": 97,
+          "lcpMs": 2278.059,
+          "cls": 0,
+          "tbtMs": 0
+        },
+        {
+          "performance": 97,
+          "lcpMs": 2292.5631000000003,
+          "cls": 0,
+          "tbtMs": 0
+        }
+      ],
+      "median": {
+        "performance": 97,
+        "lcpMs": 2292.5631000000003,
+        "cls": 0,
+        "tbtMs": 0
+      }
+    }
+  ]
+}

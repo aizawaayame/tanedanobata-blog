@@ -1,0 +1,45 @@
+/* Page transition animations with Swup */
+html.is-changing .transition-swup-fade {
+    @apply transition-all duration-200
+}
+html.is-animating .transition-swup-fade {
+    @apply opacity-0 translate-y-4
+}
+
+/* Fade-in animations for components */
+@keyframes fade-in-up {
+    0% {
+        transform: translateY(2rem);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Main components */
+.onload-animation {
+    opacity: 0;
+    animation: 300ms fade-in-up;
+    animation-fill-mode: forwards;
+}
+#navbar {
+    animation-delay: 0ms
+}
+#sidebar {
+    animation-delay: 100ms
+}
+#swup-container {
+    outline: none;
+}
+#content-wrapper {
+    animation-delay: var(--content-delay);
+}
+.footer {
+    animation-delay: 250ms;
+}
+#banner-credit {
+    animation-delay: 400ms;
+}
+

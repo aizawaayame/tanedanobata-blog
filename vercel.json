@@ -1,0 +1,125 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "astro",
+  "installCommand": "pnpm install --frozen-lockfile",
+  "buildCommand": "pnpm build",
+  "outputDirectory": "dist",
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/blog/2025/05/14/blend-shape/",
+      "destination": "/posts/blend-shape/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/posts/Blend Shape/",
+      "destination": "/posts/blend-shape/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2025/05/14/playable-api构建动画系统/",
+      "destination": "/posts/playable-animation-system/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/posts/Playable API构建动画系统/",
+      "destination": "/posts/playable-animation-system/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2025/05/27/ue-554-skeletalrendercpuskin-源码深度解析/",
+      "destination": "/posts/ue5-skeletal-render-cpu-skin/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/posts/UE5 SkeletalRenderCPUSkin 深度解析/",
+      "destination": "/posts/ue5-skeletal-render-cpu-skin/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2025/05/14/一种使用多数地形的攀爬和翻越思路/",
+      "destination": "/posts/climbing-and-vaulting/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/posts/一种使用多数地形的攀爬和翻越思路/",
+      "destination": "/posts/climbing-and-vaulting/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2025/04/08/实现一个基础的智能指针/",
+      "destination": "/posts/smart-pointer/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/posts/实现一个基础的智能指针/",
+      "destination": "/posts/smart-pointer/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2025/05/14/工具开发经验/",
+      "destination": "/posts/tool-development/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/posts/工具开发经验/",
+      "destination": "/posts/tool-development/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2025/04/29/简历归档/",
+      "destination": "/posts/resume-archive/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/posts/简历归档/",
+      "destination": "/posts/resume-archive/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2025/05/27/蒙皮和bs的compute-shader参考/",
+      "destination": "/posts/skinning-blendshape-compute/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/posts/蒙皮和BS的Compute Shader参考/",
+      "destination": "/posts/skinning-blendshape-compute/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2025/07/14/远征ims-live/",
+      "destination": "/posts/imas-live/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/posts/远征IM@S Live/",
+      "destination": "/posts/imas-live/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2025/04/24/驾照/",
+      "destination": "/posts/driving-license/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/posts/驾照/",
+      "destination": "/posts/driving-license/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/archive/:year/",
+      "destination": "/archive/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/category/:category/",
+      "destination": "/archive/?category=:category",
+      "permanent": true
+    }
+  ]
+}

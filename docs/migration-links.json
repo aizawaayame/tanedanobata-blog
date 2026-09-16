@@ -1,0 +1,20 @@
+{
+  "unresolved": [],
+  "removedTargets": [
+    {
+      "source": "docs/UE/AI/行为树/index.md",
+      "target": "任务节点",
+      "reason": "空白页面"
+    },
+    {
+      "source": "docs/UE/AI/行为树/服务节点.md",
+      "target": "任务",
+      "reason": "空白页面"
+    },
+    {
+      "source": "docs/UE/AI/行为树/装饰器节点.md",
+      "target": "任务节点",
+      "reason": "空白页面"
+    }
+  ]
+}

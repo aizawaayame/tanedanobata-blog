@@ -1,0 +1,80 @@
+---
+import type { MarkdownHeading } from "astro";
+import { siteConfig } from "../../config";
+
+interface Props {
+	class?: string;
+	headings: MarkdownHeading[];
+}
+
+let { headings = [] } = Astro.props;
+
+let minDepth = 10;
+for (const heading of headings) {
+	minDepth = Math.min(minDepth, heading.depth);
+}
+
+const className = Astro.props.class;
+const isPostsRoute = headings.length > 0;
+
+const removeTailingHash = (text: string) => {
+	let lastIndexOfHash = text.lastIndexOf("#");
+	if (lastIndexOfHash !== text.length - 1) {
+		return text;
+	}
+
+	return text.substring(0, lastIndexOfHash);
+};
+
+let heading1Count = 1;
+
+const maxLevel = siteConfig.toc.depth;
+---
+{isPostsRoute &&
+<table-of-contents class:list={[className, "group"]}>
+    {headings.filter((heading) => heading.depth < minDepth + maxLevel).map((heading) =>
+            <a href={`#${heading.slug}`} class="px-2 flex gap-2 relative transition w-full min-h-9 rounded-xl
+        hover:bg-[var(--toc-btn-hover)] active:bg-[var(--toc-btn-active)] py-2
+    ">
+                <div class:list={["transition w-5 h-5 shrink-0 rounded-lg text-xs flex items-center justify-center font-bold",
+                    {
+                        "bg-[var(--toc-badge-bg)] text-[var(--btn-content)]": heading.depth == minDepth,
+                        "ml-4": heading.depth == minDepth + 1,
+                        "ml-8": heading.depth == minDepth + 2,
+                    }
+                ]}
+                >
+                    {heading.depth == minDepth && heading1Count++}
+                    {heading.depth == minDepth + 1 && <div class="transition w-2 h-2 rounded-[0.1875rem] bg-[var(--toc-badge-bg)]"></div>}
+                    {heading.depth == minDepth + 2 && <div class="transition w-1.5 h-1.5 rounded-sm bg-black/5 dark:bg-white/10"></div>}
+                </div>
+                <div class:list={["transition text-sm", {
+                    "text-50": heading.depth == minDepth || heading.depth == minDepth + 1,
+                    "text-30": heading.depth == minDepth + 2,
+                }]}>{removeTailingHash(heading.text)}</div>
+            </a>
+    )}
+</table-of-contents>}
+
+<style>table-of-contents a[aria-current="location"]{background:var(--toc-btn-hover);color:var(--primary);}</style>
+<script>
+class TableOfContents extends HTMLElement {
+ observer?: IntersectionObserver;
+ connectedCallback(){
+  requestAnimationFrame(()=>{
+   const links=[...this.querySelectorAll<HTMLAnchorElement>('a[href^="#"]')];
+   this.observer=new IntersectionObserver(entries=>{
+    for(const entry of entries)if(entry.isIntersecting){
+     for(const link of links){
+      if(decodeURIComponent(link.hash.slice(1))===entry.target.id)link.setAttribute('aria-current','location');
+      else link.removeAttribute('aria-current');
+     }
+    }
+   },{rootMargin:'-10% 0px -70% 0px'});
+   for(const link of links){const target=document.getElementById(decodeURIComponent(link.hash.slice(1)));if(target)this.observer.observe(target);}
+  });
+ }
+ disconnectedCallback(){this.observer?.disconnect();}
+}
+if(!customElements.get('table-of-contents'))customElements.define('table-of-contents',TableOfContents);
+</script>

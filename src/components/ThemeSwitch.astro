@@ -1,0 +1,20 @@
+---
+import { Icon } from "astro-icon/components";
+---
+<button id="scheme-switch" type="button" class="btn-plain rounded-lg h-11 w-11" aria-label="切换明暗模式" title="切换明暗模式">
+ <Icon name="material-symbols:contrast" class="text-xl" />
+</button>
+<script>
+import { getStoredTheme, setTheme, applyThemeToDocument } from "../utils/setting-utils";
+import { LIGHT_MODE, DARK_MODE, AUTO_MODE } from "../constants/constants";
+const button=document.querySelector<HTMLButtonElement>('#scheme-switch')!;
+if (!document.documentElement.dataset.themeReady) {
+document.documentElement.dataset.themeReady='true';
+const modes=[LIGHT_MODE,DARK_MODE,AUTO_MODE] as const;
+const labels={light:'浅色',dark:'深色',auto:'跟随系统'};
+function label(){const text=`当前${labels[getStoredTheme()]}，点击切换明暗模式`;button.title=text;button.setAttribute('aria-label',text);}
+button.addEventListener('click',()=>{setTheme(modes[(modes.indexOf(getStoredTheme())+1)%modes.length]);label();});
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',()=>applyThemeToDocument(getStoredTheme()));
+label();
+}
+</script>

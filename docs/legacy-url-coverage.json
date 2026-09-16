@@ -1,0 +1,326 @@
+[
+  {
+    "oldUrl": "/",
+    "status": "replaced"
+  },
+  {
+    "oldUrl": "/HOMEPAGE/",
+    "status": "excluded"
+  },
+  {
+    "oldUrl": "/Algorithm/A-Star/",
+    "status": "excluded"
+  },
+  {
+    "oldUrl": "/Algorithm/图形学/三维旋转/",
+    "status": "preserved"
+  },
+  {
+    "oldUrl": "/Algorithm/图形学/图形学基础/",
+    "status": "preserved"
+  },
+  {
+    "oldUrl": "/Algorithm/图形学/线性代数基础/",
+    "status": "preserved"
+  },
+  {
+    "oldUrl": "/Algorithm/图论/BFS/",
+    "status": "preserved"
+  },
+  {
+    "oldUrl": "/Algorithm/图论/DFS/",
+    "status": "excluded"
+  },
+  {
+    "oldUrl": "/Algorithm/图论/图的存储/",
+    "status": "preserved"
+  },
+  {
+    "oldUrl": "/Algorithm/排序/TopK/",
+    "status": "preserved"
+  },
+  {
+    "oldUrl": "/Algorithm/排序/堆排序/",
+    "status": "preserved"
+  },
+  {
+    "oldUrl": "/Algorithm/排序/快速排序/",
+    "status": "preserved"
+  },
+  {
+    "oldUrl": "/Algorithm/搜索/BFS(搜索)/",
+    "status": "preserved"
+  },
+  {
+    "oldUrl": "/Algorithm/搜索/DFS(搜索)/",
+    "status": "excluded"
+  },
+  {
+    "oldUrl": "/Algorithm/搜索/二分搜索/",
+    "status": "preserved"
+  },
+  {
+    "oldUrl": "/Algorithm/数据结构/堆/",
+    "status": "preserved"
+  },
+  {
+    "oldUrl": "/Algorithm/数据结构/堆/二叉堆/",
+    "status": "preserved"
+  },
+  {
+    "oldUrl": "/Algorithm/数据结构/堆/优先级队列/",
+    "status": "preserved"
+  },
+  {
+    "oldUrl": "/Algorithm/数据结构/空间数据结构/",
+    "status": "preserved"
+  },
+  {
+    "oldUrl": "/Algorithm/数据结构/空间数据结构/AABB交叉检测/",
+    "status": "preserved"
+  },
+  {
+    "oldUrl": "/Algorithm/数据结构/空间数据结构/判断目标点是否在凸多边形区域/",
+    "status": "preserved"
+  },
+  {
+    "oldUrl": "/Algorithm/数据结构/空间数据结构/四叉树/",
+    "status": "preserved"
+  },
+  {
+    "oldUrl": "/C++/编译器/编译器优化/拷贝省略、RVO、NRVO优化策略/",
+    "status": "preserved"
+  },
+  {
+    "oldUrl": "/C++/语法/关键字/const/",
+    "status": "preserved"
+  },
+  {
+    "oldUrl": "/C++/语法/关键字/nullptr/",
+    "status": "preserved"
+  },
+  {
+    "oldUrl": "/C++/语法/关键字/sizeof/",
+    "status": "preserved"
+  },
+  {
+    "oldUrl": "/C++/语法/关键字/static/",
+    "status": "preserved"
+  },
+  {
+    "oldUrl": "/C++/语法/对象和类/this指针/",
+    "status": "preserved"
+  },
+  {
+    "oldUrl": "/Economics/宏观经济学入门/",
+    "status": "preserved"
+  },
+  {
+    "oldUrl": "/Math/图形几何学/贝塞尔曲线/",
+    "status": "preserved"
+  },
+  {
+    "oldUrl": "/Math/微积分/导数/",
+    "status": "preserved"
+  },
+  {
+    "oldUrl": "/Project/OnaGameSample/",
+    "status": "preserved"
+  },
+  {
+    "oldUrl": "/Project/OnaGameSample/八向移动/",
+    "status": "preserved"
+  },
+  {
+    "oldUrl": "/Project/OnaGameSample/攀爬/",
+    "status": "preserved"
+  },
+  {
+    "oldUrl": "/Project/OnaGameSample/相机模块设计/",
+    "status": "preserved"
+  },
+  {
+    "oldUrl": "/Project/OnaGameSample/走跑混合/",
+    "status": "preserved"
+  },
+  {
+    "oldUrl": "/Reference/Build-In/",
+    "status": "excluded"
+  },
+  {
+    "oldUrl": "/Reference/Build-In/Admonition/",
+    "status": "excluded"
+  },
+  {
+    "oldUrl": "/Reference/Build-In/Annotation/",
+    "status": "excluded"
+  },
+  {
+    "oldUrl": "/Reference/Build-In/Code Block/",
+    "status": "excluded"
+  },
+  {
+    "oldUrl": "/Reference/Build-In/Content Tab/",
+    "status": "excluded"
+  },
+  {
+    "oldUrl": "/Reference/Build-In/Footnote/",
+    "status": "excluded"
+  },
+  {
+    "oldUrl": "/Reference/Build-In/Formatting/",
+    "status": "excluded"
+  },
+  {
+    "oldUrl": "/Reference/Build-In/Grid/",
+    "status": "excluded"
+  },
+  {
+    "oldUrl": "/Reference/Build-In/Icon/",
+    "status": "excluded"
+  },
+  {
+    "oldUrl": "/UE/AI/行为树/",
+    "status": "preserved"
+  },
+  {
+    "oldUrl": "/UE/AI/行为树/任务节点/",
+    "status": "excluded"
+  },
+  {
+    "oldUrl": "/UE/AI/行为树/复合节点/",
+    "status": "preserved"
+  },
+  {
+    "oldUrl": "/UE/AI/行为树/服务节点/",
+    "status": "preserved"
+  },
+  {
+    "oldUrl": "/UE/AI/行为树/装饰器节点/",
+    "status": "preserved"
+  },
+  {
+    "oldUrl": "/UE/Core/反射/C++中调用蓝图函数/",
+    "status": "preserved"
+  },
+  {
+    "oldUrl": "/UE/Core/容器/TArray/",
+    "status": "preserved"
+  },
+  {
+    "oldUrl": "/UE/Framework/Actor/Actor/",
+    "status": "preserved"
+  },
+  {
+    "oldUrl": "/UE/Framework/Actor/Actor生命周期/",
+    "status": "preserved"
+  },
+  {
+    "oldUrl": "/UE/Framework/Camera/相机系统/",
+    "status": "preserved"
+  },
+  {
+    "oldUrl": "/UE/GC/UE垃圾回收概述和应用/",
+    "status": "preserved"
+  },
+  {
+    "oldUrl": "/UE/Network/Actor Role and Remote Role/",
+    "status": "preserved"
+  },
+  {
+    "oldUrl": "/UE/Physics/轴向/",
+    "status": "preserved"
+  },
+  {
+    "oldUrl": "/blog/",
+    "status": "excluded"
+  },
+  {
+    "oldUrl": "/blog/2025/05/14/blend-shape/",
+    "status": "redirected"
+  },
+  {
+    "oldUrl": "/blog/2025/05/14/playable-api构建动画系统/",
+    "status": "redirected"
+  },
+  {
+    "oldUrl": "/blog/2025/05/27/ue-554-skeletalrendercpuskin-源码深度解析/",
+    "status": "redirected"
+  },
+  {
+    "oldUrl": "/blog/2025/05/14/一种使用多数地形的攀爬和翻越思路/",
+    "status": "redirected"
+  },
+  {
+    "oldUrl": "/blog/2025/04/08/实现一个基础的智能指针/",
+    "status": "redirected"
+  },
+  {
+    "oldUrl": "/blog/2025/05/14/工具开发经验/",
+    "status": "redirected"
+  },
+  {
+    "oldUrl": "/blog/2025/04/29/简历归档/",
+    "status": "redirected"
+  },
+  {
+    "oldUrl": "/blog/2025/05/27/蒙皮和bs的compute-shader参考/",
+    "status": "redirected"
+  },
+  {
+    "oldUrl": "/blog/2025/04/24/驾照/",
+    "status": "redirected"
+  },
+  {
+    "oldUrl": "/游戏开发技术/GPGPU/Compute Shader in Unity/",
+    "status": "preserved"
+  },
+  {
+    "oldUrl": "/游戏开发技术/GPGPU/Hardware GPGPU/",
+    "status": "preserved"
+  },
+  {
+    "oldUrl": "/游戏开发技术/角色演出/表情系统/Blend Shape in Unity/",
+    "status": "preserved"
+  },
+  {
+    "oldUrl": "/游戏开发技术/角色演出/表情系统/BlendShape/",
+    "status": "preserved"
+  },
+  {
+    "oldUrl": "/游戏开发技术/角色演出/表情系统/关于Unity中GetBlendShapeFrame参数的解释/",
+    "status": "preserved"
+  },
+  {
+    "oldUrl": "/游戏开发技术/设计模式/行为型模式/",
+    "status": "preserved"
+  },
+  {
+    "oldUrl": "/游戏开发技术/设计模式/行为型模式/策略模式/",
+    "status": "preserved"
+  },
+  {
+    "oldUrl": "/游戏开发技术/骨骼动画/GPU蒙皮/",
+    "status": "excluded"
+  },
+  {
+    "oldUrl": "/游戏开发技术/骨骼动画/前向运动学和逆向运动学/",
+    "status": "preserved"
+  },
+  {
+    "oldUrl": "/blog/archive/2025/",
+    "status": "redirected-pattern"
+  },
+  {
+    "oldUrl": "/blog/category/游戏开发/",
+    "status": "redirected-pattern"
+  },
+  {
+    "oldUrl": "/blog/category/生活/",
+    "status": "redirected-pattern"
+  },
+  {
+    "oldUrl": "/blog/category/cpp/",
+    "status": "redirected-pattern"
+  }
+]

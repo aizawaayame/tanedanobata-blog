@@ -1,0 +1,18 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import type { GetStaticPaths, Page } from "astro";
+import Pagination from "../components/control/Pagination.astro";
+import PostPage from "../components/PostPage.astro";
+import ArticlePage from "../components/ArticlePage.astro";
+import { PAGE_SIZE } from "../constants/constants";
+import MainGridLayout from "../layouts/MainGridLayout.astro";
+import { getSortedPosts } from "../utils/content-utils";
+export const getStaticPaths = (async ({paginate}) => {
+ const pages=paginate(await getSortedPosts(),{pageSize:PAGE_SIZE});
+ const notes=await getCollection("posts",({data})=>data.kind !== "post" && !data.draft);
+ return [...pages,...notes.map(entry=>({params:{page:entry.data.route.replace(/^\/|\/$/g,"")},props:{entry}}))];
+}) satisfies GetStaticPaths;
+interface Props { page?: Page<CollectionEntry<"posts">>; entry?: CollectionEntry<"posts">; }
+const {page,entry}=Astro.props;
+---
+{entry ? <ArticlePage entry={entry}/> : page && <MainGridLayout><PostPage page={page}/><Pagination class="mx-auto" page={page}/></MainGridLayout>}

@@ -1,0 +1,51 @@
+---
+import { Icon } from "astro-icon/components";
+---
+<div class="site-search">
+ <button id="search-switch" type="button" class="btn-plain rounded-lg h-11 px-3 gap-2" aria-label="搜索文章" aria-expanded="false" aria-controls="site-search-panel"><Icon name="material-symbols:search" class="text-xl"/><span class="hidden lg:inline">搜索</span></button>
+ <section id="site-search-panel" hidden class="card-base absolute top-20 left-4 right-4 md:left-auto md:w-[30rem] shadow-xl p-4" aria-label="文章搜索">
+  <label for="site-search-input" class="sr-only">搜索文章</label>
+  <input id="site-search-input" type="search" placeholder="搜索中文、UE、C++…" autocomplete="off" class="w-full rounded-lg px-3 py-3 bg-black/5 dark:bg-white/5 text-90" />
+  <p id="site-search-status" role="status" class="text-sm text-75 mt-3">输入关键词查找文章。</p>
+  <div id="site-search-results" class="search-results"></div>
+ </section>
+</div>
+<style>#site-search-panel[hidden]{display:none!important}.search-results{max-height:65vh;overflow:auto}</style>
+<script>
+const button=document.querySelector<HTMLButtonElement>('#search-switch')!;
+if (!document.documentElement.dataset.searchReady) {
+document.documentElement.dataset.searchReady='true';
+const panel=document.querySelector<HTMLElement>('#site-search-panel')!;
+const input=document.querySelector<HTMLInputElement>('#site-search-input')!;
+const status=document.querySelector<HTMLElement>('#site-search-status')!;
+const results=document.querySelector<HTMLElement>('#site-search-results')!;
+type SearchItem={url:string;meta:{title?:string};excerpt:string};
+type SearchApi={search:(query:string)=>Promise<{results:Array<{data:()=>Promise<SearchItem>}>}>};
+let api:Promise<SearchApi>|undefined;
+let request=0;
+function close(){panel.hidden=true;button.setAttribute('aria-expanded','false');}
+button.addEventListener('click',()=>{panel.hidden=!panel.hidden;button.setAttribute('aria-expanded',String(!panel.hidden));if(!panel.hidden)input.focus();});
+document.addEventListener('click',event=>{const target=event.target as Node;if(!panel.contains(target)&&!button.contains(target))close();});
+document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!panel.hidden){close();button.focus();}});
+input.addEventListener('input',async()=>{
+ const current=++request; const query=input.value.trim();results.replaceChildren();
+ if(!query){status.textContent='输入关键词查找文章。';return;}
+ status.textContent='正在搜索…';
+ try {
+  const modulePath='/pagefind/pagefind.js';
+  api??=import(/* @vite-ignore */ modulePath).catch(error=>{api=undefined;throw error;});
+  const response=await (await api!).search(query);
+  const items=await Promise.all(response.results.slice(0,20).map(item=>item.data()));
+  if(current!==request)return;
+  status.textContent=items.length?`找到 ${response.results.length} 篇文章`:'没有找到相关文章，试试其他关键词。';
+  for(const item of items){
+   const link=document.createElement('a');link.href=item.url;link.className='block rounded-lg p-3 mt-2 hover:bg-black/5 dark:hover:bg-white/5';
+   const title=document.createElement('strong');title.textContent=item.meta.title||'文章';title.className='text-90';
+   const excerpt=document.createElement('p');excerpt.className='text-sm text-75 mt-1';
+   const parsed=new DOMParser().parseFromString(item.excerpt,'text/html');excerpt.textContent=parsed.body.textContent;
+   link.append(title,excerpt);link.addEventListener('click',close);results.append(link);
+  }
+ }catch{if(current===request)status.textContent=import.meta.env.DEV?'搜索索引在构建后生成，请使用 pnpm build 和 pnpm preview。':'搜索暂时不可用，请刷新后重试。';}
+});
+}
+</script>
