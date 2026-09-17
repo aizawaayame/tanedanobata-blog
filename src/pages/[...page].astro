@@ -9,7 +9,7 @@ import MainGridLayout from "../layouts/MainGridLayout.astro";
 import { getSortedPosts } from "../utils/content-utils";
 export const getStaticPaths = (async ({paginate}) => {
  const pages=paginate(await getSortedPosts(),{pageSize:PAGE_SIZE});
- const notes=await getCollection("posts",({data})=>data.kind !== "post" && !data.draft);
+ const notes=await getCollection("posts",({data})=>data.kind !== "post" && (import.meta.env.DEV || !data.draft));
  return [...pages,...notes.map(entry=>({params:{page:entry.data.route.replace(/^\/|\/$/g,"")},props:{entry}}))];
 }) satisfies GetStaticPaths;
 interface Props { page?: Page<CollectionEntry<"posts">>; entry?: CollectionEntry<"posts">; }

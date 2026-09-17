@@ -1,0 +1,23 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "博客：实时预览",
+      "type": "shell",
+      "command": "pnpm",
+      "args": ["dev", "--host", "127.0.0.1", "--open"],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "isBackground": true,
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      },
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    }
+  ]
+}

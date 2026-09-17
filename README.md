@@ -21,6 +21,28 @@ pnpm preview
 
 正文位于 `src/content/posts/`，使用 Markdown；个人介绍位于 `src/content/spec/about.md`。
 
+### 在 VS Code 中编辑并实时预览
+
+1. 用 VS Code 打开整个仓库目录。首次使用先在终端运行 `pnpm install --frozen-lockfile`。
+2. 按 `Ctrl+Shift+P`，选择“任务: 运行任务”（`Tasks: Run Task`），再选择“博客：实时预览”。浏览器会自动打开本地博客，地址以终端显示为准，通常是 `http://127.0.0.1:4321/`。也可以直接在终端运行 `pnpm dev --host 127.0.0.1 --open`。
+3. 打开 `src/content/posts/` 下要修改的 `.md` 文件，在浏览器打开对应文章。修改后按 `Ctrl+S` 保存，网页会自动更新，保留博客的实际排版、公式和代码样式。
+4. 文件开头两个 `---` 之间是标题、标签等信息，后面是正文。修改已有文章时保留 `slug` 和 `route`，避免改变访问地址。
+5. 结束预览时，在运行任务的终端按 `Ctrl+C`，或执行“任务: 终止任务”。
+
+VS Code 自带的 Markdown 分栏预览快捷键是先按 `Ctrl+K`，再按 `V`；它适合检查正文，实际博客效果以浏览器为准。实时写作使用 `pnpm dev`；`pnpm preview` 只展示上一次构建结果。
+
+新建文章可以运行：
+
+```sh
+pnpm new-post my-new-post "我的新文章"
+```
+
+该命令创建 `src/content/posts/my-new-post.md`，默认 `draft: true`。启动开发预览后可访问 `/posts/my-new-post/`；草稿也会出现在开发环境的首页中，生产构建会排除草稿。新文章的地址按下方规则登记。
+
+保存只更新本地文件和本地预览，不会发布。准备发布时将文章设为 `draft: false`，运行 `pnpm check`、`pnpm build` 和 `pnpm validate`，仅提交本次文章及相关资源，推送 `main` 后等待 CI 和 Vercel 部署完成。
+
+### 文章信息
+
 ```yaml
 ---
 title: 文章标题
