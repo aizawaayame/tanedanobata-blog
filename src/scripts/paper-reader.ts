@@ -11,13 +11,9 @@ function syncEnglishToggle(article: Element) {
 document.addEventListener("click", (event) => {
 	const target = event.target;
 	if (!(target instanceof Element)) return;
-	const button = target.closest("[data-psl-english-toggle], [data-psl-print]");
+	const button = target.closest("[data-psl-english-toggle]");
 	const article = button?.closest(".custom-md");
 	if (!button || !article) return;
-	if (button.hasAttribute("data-psl-print")) {
-		window.print();
-		return;
-	}
 	const details = [...article.querySelectorAll<HTMLDetailsElement>("details.psl-english")];
 	const expanded = !details.every((detail) => detail.open);
 	for (const detail of details) detail.open = expanded;
