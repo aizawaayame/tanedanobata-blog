@@ -368,7 +368,7 @@ PSL 最早于 2012 年在智能摄影与剪辑国际研讨会（WICED）上提�
 
 <figure class="psl-paper-figure" data-figure="2" id="fig-2">
 
-<figcaption><span class="psl-fig-number">图 02</span><h3>《西北偏北》：两个经典镜头的 PSL 描述</h3></figcaption>
+<figcaption><span class="psl-fig-number">图 02</span><h3>希区柯克《西北偏北》中两个经典镜头的 PSL 描述</h3></figcaption>
 
 <img alt="图 2：阿尔弗雷德·希区柯克《西北偏北》中两个标志性镜头的 PSL 描述，含原始画面和完整解析树" decoding="async" height="553" loading="lazy" src="/images/posts/prose-storyboard-language-zh/fig-02.png" width="843"/>
 
@@ -1256,7 +1256,7 @@ PEG 的关键特点是使用有先后顺序的选择运算符 `/`，而不是无
 
 <figure class="psl-paper-figure" data-figure="11" id="fig-11">
 
-<figcaption><span class="psl-fig-number">图 11</span><h3>《闪灵》：摄影机跟随人物移动</h3></figcaption>
+<figcaption><span class="psl-fig-number">图 11</span><h3>《闪灵》：跟随人物移动的发展镜头</h3></figcaption>
 
 <img alt="图 11：发展镜头：《闪灵》中跟随演员的移动摄影，含原始画面和完整解析树" decoding="async" height="1004" loading="lazy" src="/images/posts/prose-storyboard-language-zh/fig-11.png" width="1756"/>
 
