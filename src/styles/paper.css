@@ -73,6 +73,7 @@
 	body:has(.psl-controls) :is(#swup-container, #content-wrapper, #content-wrapper > div, #post-container) { display: block; overflow: visible !important; transform: none !important; }
 	body:has(.psl-controls) #post-container { padding: 0; background: white !important; }
 	body:has(.psl-controls) #post-container * { color: #111 !important; text-shadow: none !important; animation: none !important; }
+	body:has(.psl-controls) .onload-animation { opacity: 1 !important; transform: none !important; animation: none !important; }
 	body:has(.psl-controls) #post-container > details { display: none; }
 	body:has(.psl-controls) :is(.expressive-code, pre, code, .psl-table-scroll) { content-visibility: visible; contain: none; overflow: visible !important; background: white !important; }
 	body:has(.psl-controls) .expressive-code pre { white-space: pre-wrap; }
