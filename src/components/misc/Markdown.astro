@@ -1,6 +1,7 @@
 ---
 import "@fontsource-variable/jetbrains-mono";
 import "@fontsource-variable/jetbrains-mono/wght-italic.css";
+import "../../styles/paper.css";
 
 interface Props {
 	class: string;
@@ -15,6 +16,8 @@ const className = Astro.props.class;
 </div>
 
 <script>
+import "../../scripts/paper-reader";
+
 if (!document.documentElement.dataset.copyReady) {
 document.documentElement.dataset.copyReady="true";
 document.addEventListener("click", function (e: MouseEvent) {

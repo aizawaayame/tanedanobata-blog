@@ -6,7 +6,8 @@ import MarkdownIt from "markdown-it";
 import sanitizeHtml from "sanitize-html";
 import { siteConfig } from "@/config";
 
-const parser = new MarkdownIt();
+// Render authored HTML (figures and bilingual details), then sanitize it below.
+const parser = new MarkdownIt({ html: true });
 
 function stripInvalidXmlChars(str: string): string {
 	return str.replace(
@@ -34,6 +35,7 @@ export async function GET(context: APIContext) {
 				link: getPostUrlBySlug(post.slug),
 				content: sanitizeHtml(parser.render(cleanedContent), {
 					allowedTags: sanitizeHtml.defaults.allowedTags.concat(["img"]),
+					exclusiveFilter: (frame) => frame.attribs.class?.split(/\s+/).includes("psl-controls") ?? false,
 				}),
 			};
 		}),
