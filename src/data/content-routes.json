@@ -60,5 +60,14 @@
   "note-bab01997aeab": "/游戏开发技术/设计模式/行为型模式/",
   "note-1e9cafaf96a7": "/游戏开发技术/设计模式/行为型模式/策略模式/",
   "note-852f4ba11291": "/游戏开发技术/骨骼动画/前向运动学和逆向运动学/",
-  "prose-storyboard-language-zh": "/posts/prose-storyboard-language-zh/"
+  "prose-storyboard-language-zh": "/posts/prose-storyboard-language-zh/",
+  "ue-editor-graph-view": "/posts/ue-editor-graph-view/",
+  "ue-editor-persistence-python": "/posts/ue-editor-persistence-python/",
+  "ue-editor-plugin-window": "/posts/ue-editor-plugin-window/",
+  "ue-editor-preview-playback": "/posts/ue-editor-preview-playback/",
+  "ue-editor-preview-viewport": "/posts/ue-editor-preview-viewport/",
+  "ue-editor-roadmap": "/posts/ue-editor-roadmap/",
+  "ue-editor-slate-timeline": "/posts/ue-editor-slate-timeline/",
+  "ue-editor-slate-ui": "/posts/ue-editor-slate-ui/",
+  "ue-editor-state-undo": "/posts/ue-editor-state-undo/"
 }
