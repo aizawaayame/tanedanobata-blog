@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-labelledby="title desc">
+  <title id="title">从动画轨迹和摄影惯用式到最终摄影机序列</title>
+  <desc id="desc">原创教学流程图。动画轨迹和摄影惯用式库为序列规划提供输入。候选镜头序列进入 DCCL 编译，求出机位位置、朝向、视场角和时间，再经启发式评估得到最终镜头序列。这是规划与候选评估流程，不代表实时控制。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0 0 9 4.5 0 9Z" fill="#0f766e"/></marker>
+    <style>text{font-family:"Noto Sans SC","Microsoft YaHei","PingFang SC",sans-serif;fill:#17334b}.title{font-size:34px;font-weight:700}.sub{font-size:23px;fill:#526879}.label{font-size:27px;font-weight:700}.small{font-size:22px}.muted{fill:#526879}.white{fill:#fff}.teal{fill:#0f766e}.amber{fill:#a35b0a}</style>
+  </defs>
+  <rect width="1200" height="640" fill="#f7fafb"/>
+  <text x="52" y="60" class="title">先生成可行拍法，再评估镜头序列</text>
+  <text x="52" y="99" class="sub">CPS 的核心分工：安排拍什么，求解怎么拍，再比较拍得怎样</text>
+
+  <rect x="52" y="141" width="250" height="109" rx="16" fill="#fff" stroke="#cad7df" stroke-width="2"/>
+  <text x="76" y="180" class="label">动画轨迹</text>
+  <text x="76" y="211" class="small muted">角色、动作、位置</text>
+  <text x="76" y="240" class="small muted">随时间变化</text>
+  <rect x="52" y="276" width="250" height="109" rx="16" fill="#fff" stroke="#cad7df" stroke-width="2"/>
+  <text x="76" y="315" class="label">摄影惯用式库</text>
+  <text x="76" y="350" class="small muted">可用的镜头组织方式</text>
+  <path d="M302 195H329V330H302" fill="none" stroke="#0f766e" stroke-width="3"/>
+  <path d="M329 262H350" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="362" y="166" width="230" height="194" rx="18" fill="#17334b"/>
+  <text x="386" y="209" class="label white">① 序列规划</text>
+  <text x="386" y="254" class="small white">安排事件如何被拍摄</text>
+  <text x="386" y="288" class="small white">组合候选镜头序列</text>
+  <text x="386" y="335" class="small" fill="#a9d7cf" style="fill:#a9d7cf">输出：拍摄描述</text>
+  <path d="M592 262H642" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="654" y="141" width="494" height="244" rx="18" fill="#e2f3ef" stroke="#9ccdc3" stroke-width="2"/>
+  <text x="681" y="183" class="label teal">② DCCL 编译</text>
+  <text x="681" y="221" class="small">把画面要求转换为候选摄影机参数</text>
+  <rect x="681" y="244" width="204" height="47" rx="9" fill="#fff"/>
+  <rect x="905" y="244" width="216" height="47" rx="9" fill="#fff"/>
+  <rect x="681" y="307" width="204" height="47" rx="9" fill="#fff"/>
+  <rect x="905" y="307" width="216" height="47" rx="9" fill="#fff"/>
+  <text x="783" y="276" text-anchor="middle" class="small">机位位置</text>
+  <text x="1013" y="276" text-anchor="middle" class="small">摄影机朝向</text>
+  <text x="783" y="339" text-anchor="middle" class="small">视场角 FOV</text>
+  <text x="1013" y="339" text-anchor="middle" class="small">开始与结束时间</text>
+
+  <path d="M901 385V423" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="654" y="435" width="494" height="112" rx="18" fill="#fff0d7" stroke="#eac68e" stroke-width="2"/>
+  <text x="681" y="476" class="label amber">③ 启发式评估</text>
+  <text x="681" y="515" class="small">比较候选方案，选择最终的摄影机序列</text>
+  <path d="M654 491H604" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="52" y="435" width="540" height="112" rx="18" fill="#17334b"/>
+  <text x="78" y="476" class="label white">④ 最终镜头序列</text>
+  <text x="78" y="515" class="small white">带有具体摄影机参数和切镜时间的拍摄结果</text>
+  <text x="52" y="607" class="small muted">教学示意 · 箭头表示主要数据流；规划与评估需要计算时间，不等同于实时控制</text>
+</svg>

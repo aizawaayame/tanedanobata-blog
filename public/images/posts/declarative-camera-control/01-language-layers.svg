@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="660" viewBox="0 0 1200 660" role="img" aria-labelledby="title desc">
+  <title id="title">DCCL 的三个层次：摄影惯用式、镜头与片段</title>
+  <desc id="desc">原创教学示意。甲接近乙并在门边停下。摄影惯用式组织两个镜头：双人远景交代距离，中景观察接近。中景包含固定观察与平移跟随两个片段，片段衔接时不切镜，两个镜头之间才切换机位。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0 0 9 4.5 0 9Z" fill="#0f766e"/></marker>
+    <style>text{font-family:"Noto Sans SC","Microsoft YaHei","PingFang SC",sans-serif;fill:#17334b}.title{font-size:34px;font-weight:700}.sub{font-size:23px;fill:#526879}.label{font-size:27px;font-weight:700}.small{font-size:22px}.muted{fill:#526879}.white{fill:#fff}.teal{fill:#0f766e}.amber{fill:#a35b0a}</style>
+  </defs>
+  <rect width="1200" height="660" fill="#f7fafb"/>
+  <text x="52" y="60" class="title">从拍摄方案，到镜头，再到连续片段</text>
+  <text x="52" y="99" class="sub">原创场景：甲接近乙，并在门边停下</text>
+  <rect x="52" y="130" width="1096" height="78" rx="16" fill="#17334b"/>
+  <text x="80" y="164" class="label white">Idiom · 摄影惯用式</text>
+  <text x="80" y="194" class="small white">组织整个事件的拍摄方案：先交代距离，再观察接近与停下</text>
+  <path d="M310 208V232" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M890 208V232" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="64" y="246" width="508" height="284" rx="18" fill="#fff" stroke="#cad7df" stroke-width="2"/>
+  <text x="88" y="287" class="label">Shot 1 · 双人远景</text>
+  <text x="88" y="321" class="small muted">交代甲与乙的距离</text>
+  <rect x="88" y="345" width="460" height="115" rx="13" fill="#e2f3ef"/>
+  <text x="318" y="379" text-anchor="middle" class="label teal">片段 A · fragment</text>
+  <text x="318" y="425" text-anchor="middle" class="small">固定机位，建立空间关系</text>
+  <path d="M94 488H542" stroke="#0f766e" stroke-width="5" stroke-linecap="round"/>
+  <text x="318" y="519" text-anchor="middle" class="small muted">一个连续镜头</text>
+  <rect x="628" y="246" width="508" height="284" rx="18" fill="#fff" stroke="#cad7df" stroke-width="2"/>
+  <text x="652" y="287" class="label">Shot 2 · 中景</text>
+  <text x="652" y="321" class="small muted">甲从画面左侧进入，停在乙旁</text>
+  <rect x="652" y="345" width="220" height="115" rx="13" fill="#e2f3ef"/>
+  <rect x="892" y="345" width="220" height="115" rx="13" fill="#e2f3ef"/>
+  <text x="762" y="379" text-anchor="middle" class="label teal">片段 B</text>
+  <text x="762" y="410" text-anchor="middle" class="small teal">fragment</text>
+  <text x="762" y="442" text-anchor="middle" class="small">先固定机位观察</text>
+  <text x="1002" y="379" text-anchor="middle" class="label teal">片段 C</text>
+  <text x="1002" y="410" text-anchor="middle" class="small teal">fragment</text>
+  <text x="1002" y="442" text-anchor="middle" class="small">随后平移跟随</text>
+  <path d="M658 488H1106" stroke="#0f766e" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="882" cy="488" r="7" fill="#fff" stroke="#0f766e" stroke-width="3"/>
+  <text x="882" y="519" text-anchor="middle" class="small muted">片段衔接，仍然不切镜</text>
+  <path d="M600 256V545" stroke="#d58b27" stroke-width="3" stroke-dasharray="7 7"/>
+  <rect x="551" y="553" width="98" height="36" rx="18" fill="#fff0d7"/>
+  <text x="600" y="579" text-anchor="middle" class="small amber">切镜</text>
+  <text x="52" y="630" class="small muted">教学示意 · 名称与镜头安排为原创例子，非原论文图示复刻</text>
+</svg>

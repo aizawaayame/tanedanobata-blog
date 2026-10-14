@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="660" viewBox="0 0 1200 660" role="img" aria-labelledby="title desc">
+  <title id="title">画面位置与镜头时间：甲在门边接近乙</title>
+  <desc id="desc">原创教学示意。先用双人远景交代距离，再切到中景：甲从左侧入画，走向门边的乙并停下。中景画框以虚线轨迹显示甲的画面运动，下面的时间轴展示两个镜头覆盖动作的区间和切镜边界。位置与时间并非测量值。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto"><path d="M0 0 8 4 0 8Z" fill="#0f766e"/></marker>
+    <style>text{font-family:"Noto Sans SC","Microsoft YaHei","PingFang SC",sans-serif;fill:#17334b}.title{font-size:34px;font-weight:700}.sub{font-size:23px;fill:#526879}.label{font-size:27px;font-weight:700}.small{font-size:22px}.muted{fill:#526879}.white{fill:#fff}.teal{fill:#0f766e}.amber{fill:#a35b0a}.body{stroke:#0f766e;stroke-width:5;fill:none;stroke-linecap:round;stroke-linejoin:round}.body-b{stroke:#17334b;stroke-width:5;fill:none;stroke-linecap:round;stroke-linejoin:round}</style>
+  </defs>
+  <rect width="1200" height="660" fill="#f7fafb"/>
+  <text x="52" y="60" class="title">画面要求，也在约束镜头的时间</text>
+  <text x="52" y="99" class="sub">同一段“甲接近乙并在门边停下”的动作，用远景与中景共同覆盖</text>
+  <text x="64" y="151" class="label">镜头 A · 双人远景交代距离</text>
+  <text x="654" y="151" class="label">镜头 B · 中景观察接近</text>
+  <rect x="60" y="171" width="500" height="220" rx="14" fill="#fff" stroke="#cad7df" stroke-width="2"/>
+  <rect x="644" y="171" width="496" height="220" rx="14" fill="#fff" stroke="#cad7df" stroke-width="2"/>
+  <path d="M79 353H541M663 353H1121" stroke="#d7e1e7" stroke-width="2"/>
+  <path d="M494 353V236H533V353M1098 353V212H1132V353" fill="#f0e9dd" stroke="#b3a58d" stroke-width="3"/>
+  <circle cx="521" cy="302" r="3" fill="#b3a58d"/>
+  <circle cx="1121" cy="293" r="3" fill="#b3a58d"/>
+  <circle cx="145" cy="273" r="20" fill="#e2f3ef" stroke="#0f766e" stroke-width="3"/>
+  <text x="145" y="281" text-anchor="middle" class="small teal">甲</text>
+  <path d="M145 296V326M145 307L127 320M145 307L163 320M145 326L132 349M145 326L158 349" class="body"/>
+  <circle cx="458" cy="273" r="20" fill="#eaf0f4" stroke="#17334b" stroke-width="3"/>
+  <text x="458" y="281" text-anchor="middle" class="small">乙</text>
+  <path d="M458 296V326M458 307L440 320M458 307L476 320M458 326L445 349M458 326L471 349" class="body-b"/>
+  <path d="M185 242H411" stroke="#0f766e" stroke-width="3" stroke-dasharray="7 7" marker-end="url(#arrow)"/>
+  <text x="300" y="221" text-anchor="middle" class="small muted">甲向门边的乙走去</text>
+  <g opacity="0.35">
+    <circle cx="698" cy="257" r="24" fill="#e2f3ef" stroke="#0f766e" stroke-width="3"/>
+    <text x="698" y="265" text-anchor="middle" class="small teal">甲</text>
+    <path d="M698 284V320M698 296L676 311M698 296L720 311M698 320L682 347M698 320L714 347" class="body"/>
+  </g>
+  <path d="M731 291H947" stroke="#0f766e" stroke-width="3" stroke-dasharray="7 7" marker-end="url(#arrow)"/>
+  <circle cx="984" cy="257" r="24" fill="#e2f3ef" stroke="#0f766e" stroke-width="3"/>
+  <text x="984" y="265" text-anchor="middle" class="small teal">甲</text>
+  <path d="M984 284V320M984 296L962 311M984 296L1006 311M984 320L968 347M984 320L1000 347" class="body"/>
+  <circle cx="1066" cy="257" r="24" fill="#eaf0f4" stroke="#17334b" stroke-width="3"/>
+  <text x="1066" y="265" text-anchor="middle" class="small">乙</text>
+  <path d="M1066 284V320M1066 296L1044 311M1066 296L1088 311M1066 320L1050 347M1066 320L1082 347" class="body-b"/>
+  <text x="679" y="217" class="small teal">左侧入画</text>
+  <text x="933" y="217" class="small amber">在乙旁停下</text>
+  <text x="60" y="431" class="small muted">画面状态：先看清人物关系</text>
+  <text x="644" y="431" class="small muted">画面状态：入画 → 接近 → 停下</text>
+  <rect x="60" y="477" width="353" height="43" rx="10" fill="#17334b"/>
+  <rect x="424" y="477" width="716" height="43" rx="10" fill="#0f766e"/>
+  <text x="235" y="507" text-anchor="middle" class="small white">镜头 A</text>
+  <text x="782" y="507" text-anchor="middle" class="small white">镜头 B 的可用时间区间</text>
+  <path d="M419 458V540" stroke="#d58b27" stroke-width="4"/>
+  <text x="60" y="567" class="small muted">动作开始</text>
+  <text x="419" y="567" text-anchor="middle" class="small amber">切换机位</text>
+  <text x="1140" y="567" text-anchor="end" class="small muted">甲停下 · 动作时间 →</text>
+  <text x="52" y="610" class="small">画面条件与角色轨迹共同约束起止时间；切镜仍须结合整段拍摄方案。</text>
+  <text x="52" y="643" class="small muted">教学示意 · 虚影表示较早位置；位置与时间非测量值；非原论文图示复刻</text>
+</svg>
