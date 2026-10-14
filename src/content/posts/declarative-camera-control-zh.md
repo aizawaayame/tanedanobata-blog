@@ -2,7 +2,7 @@
 title: 用于自动摄影的声明式摄影机控制——中文全译
 slug: declarative-camera-control-zh
 published: 2026-10-14
-draft: true
+draft: false
 description: AAAI 1996《Declarative Camera Control for Automatic Cinematography》完整中文译文与逐段英文对照，保留 9 幅图、2 张表、DCCL 代码、6 条脚注及全部参考文献。
 tags: [论文翻译, 自动摄影, DCCL]
 category: 游戏开发

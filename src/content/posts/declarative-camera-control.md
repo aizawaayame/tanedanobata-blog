@@ -2,7 +2,7 @@
 title: 声明式摄影机控制：理解 DCCL 与自动摄影
 slug: declarative-camera-control
 published: 2026-10-14
-draft: true
+draft: false
 description: 从“甲走近乙”的原创小场景理解 DCCL 的摄影意图、镜头分层与 CPS 规划流程，并对照六项自动摄影研究，讨论游戏演出工具的设计边界。
 tags: [自动摄影, 镜头语言, 论文阅读]
 category: 游戏开发
